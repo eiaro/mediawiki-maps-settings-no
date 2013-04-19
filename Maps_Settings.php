@@ -280,6 +280,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 		
 			'nasa' => 'OpenLayers.Layer.WMS("NASA Global Mosaic", "http://t1.hypercube.telascience.org/cgi-bin/landsat7",
 				{layers: "landsat7", "sphericalMercator":true} )',
+
+			'c-europa' => 'OpenLayers.Layer.WMS("Statens Kartverk: Europa", "http://opencache.statkart.no/gatekeeper/gk/gk.open?",{ layers: "europa", format: "image/png", transparent: true },{attribution:"&copy; Statens kartverk", opacity:0.5})',
+                        'c-sjo' => 'OpenLayers.Layer.WMS("Statens Kartverk: Sj&oslash; hovedkart", "http://opencache.statkart.no/gatekeeper/gk/gk.open?",{ layers: "sjo_hovedkart2", format: "image/png" },{attribution:"&copy; Statens kartverk"})',
+                        'c-topo2' => 'OpenLayers.Layer.WMS("Topografisk norgeskart", "http://opencache.statkart.no/gatekeeper/gk/gk.open?",{ layers: "topo2", format: "image/png" },{attribution:"&copy; Statens kartverk"})',
+
+			'europa' => 'OpenLayers.Layer.WMS("Statens Kartverk: Europa", "http://opencache.statkart.no/gatekeeper/gk/gk.open?",{ layers: "europa", format: "image/png" })',
+			'sjo' => 'OpenLayers.Layer.WMS("Statens Kartverk: Sj&oslash; hovedkart", "http://openwms.statkart.no/skwms1/wms.sjo_hovedkart2?",{ layers: "sjokart_hovedkartserien2", format: "image/png" })',
+			'topo2' => 'OpenLayers.Layer.WMS("Topografisk norgeskart", "http://openwms.statkart.no/skwms1/wms.topo2?",{ layers: "topo2_WMS", format: "image/png" })',
 		);
 		
 		// Layer group definitions. Group names must be different from layer names, and
@@ -288,6 +296,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 			'yahoo' => array( 'yahoo-normal', 'yahoo-satellite', 'yahoo-hybrid' ),
 			'bing' => array( 'bing-normal', 'bing-satellite', 'bing-hybrid' ),
 			'osm' => array( 'osmarender', 'osm-mapnik', 'osm-cyclemap' ),
+			'kartverket' => array( 'europa', 'sjo', 'topo2', 'c-europa', 'c-sjo', 'c-topo2' ),
 		);
 		
 		// Layer dependencies
